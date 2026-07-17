@@ -1,0 +1,9 @@
+.text-block {
+  width: 100%;
+}
+
+.char {
+  will-change: transform;
+  display: inline-block;
+  text-align: center;
+}
