@@ -38,14 +38,7 @@ export const Hobbies = () => {
 
         {/* HEADER */}
         <div className="text-center mb-24">
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-blue-500 font-bold tracking-widest uppercase text-sm mb-4"
-          >
-            Athlete by Passion, Gamer by Choice
-          </motion.p>
+
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
