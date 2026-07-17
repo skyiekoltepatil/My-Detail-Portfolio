@@ -33,17 +33,16 @@ const ScrambledText: React.FC<ScrambledTextProps> = ({
     if (!rootRef.current) return;
 
     const split = new SplitText(rootRef.current, {
-      type: 'chars',
-      charsClass: 'char'
+      type: 'words,chars',
+      charsClass: 'char',
+      wordsClass: 'word'
     });
     charsRef.current = split.chars;
 
     charsRef.current.forEach((c: any) => {
       // Fix the width of each character to its initial width to prevent layout thrashing and jitter!
-      const rect = c.getBoundingClientRect();
       gsap.set(c, {
         display: 'inline-block',
-        width: rect.width,
         attr: { 'data-content': c.innerHTML }
       });
     });
