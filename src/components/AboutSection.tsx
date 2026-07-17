@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import aboutImage from '../assets/image-1.png';
-import LogoLoop from '../components/LogoLoop';
-import ScrambledText from '../components/ScrambledText';
+import LogoLoop from './LogoLoop';
+import ScrambledText from './ScrambledText';
 import {
   SiReact, SiNextdotjs, SiTypescript, SiTailwindcss,
   SiVite, SiNodedotjs, SiPython, SiPostgresql,
@@ -43,26 +43,14 @@ const allLogos = [
   { node: <FaMicrosoft style={{ color: '#5E5E5E' }} />, title: 'Power BI / Excel' },
 ];
 
-export const About = () => {
+export const AboutSection = () => {
   return (
-    <section className="py-24 relative z-10 bg-white/40 min-h-screen flex flex-col items-center justify-center">
-      <div className="w-full max-w-7xl mx-auto px-6 md:px-12">
+    <section id="about-me" className="py-24 relative z-10 bg-white/40">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="mb-16 md:mb-24 text-center">
-          <motion.h2 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-4xl md:text-6xl font-bold tracking-tighter text-slate-900"
-          >
-            About <span className="text-gradient">Me</span>
-          </motion.h2>
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-slate-900">About <span className="text-gradient">Me</span></h2>
         </div>
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex flex-col md:flex-row gap-16 items-start"
-        >
+        <div className="flex flex-col md:flex-row gap-16 items-start">
           <div className="w-full md:w-1/2">
             <div className="rounded-[2.5rem] overflow-hidden group">
               <motion.img
@@ -79,14 +67,15 @@ export const About = () => {
               </p>
             </ScrambledText>
           </div>
-        </motion.div>
+        </div>
 
         {/* Tech Stack Logo Loop */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-20 pt-10 border-t border-slate-200/50 w-full"
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mt-20 pt-10 border-t border-slate-200/50"
         >
           <p className="text-xs font-bold text-slate-400 mb-8 uppercase tracking-widest text-center">
             Technologies I Work With

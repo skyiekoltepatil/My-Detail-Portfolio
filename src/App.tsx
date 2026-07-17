@@ -9,6 +9,7 @@ import { Contact } from './pages/Contact';
 import { Quote } from './pages/Quote';
 import { ContactSection } from './components/ContactSection';
 import { QuoteSection } from './components/QuoteSection';
+import { AboutSection } from './components/AboutSection';
 
 import { PhotoGallery } from './components/PhotoGallery';
 
@@ -17,7 +18,7 @@ const FullHomePage = () => (
     <Home />
     <PhotoGallery />
     <QuoteSection />
-    <About />
+    <AboutSection />
     <Experience />
     <ContactSection />
   </>
