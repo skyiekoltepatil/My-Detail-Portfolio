@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CustomCursor, BackgroundEffects } from './Shared';
+// @ts-ignore
 import CursorGrid from './CursorGrid';
 
 const AppleLogo = () => (

@@ -1,4 +1,3 @@
-import React from 'react';
 import StickerDrag from './StickerDrag';
 
 import sticker1 from '../assets/image-1-stricker.png';
