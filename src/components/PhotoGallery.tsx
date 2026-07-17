@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import innovateImage from '../assets/INNOVATE-image.jpeg';
 
 const PHOTOS = [
   {
@@ -9,7 +10,7 @@ const PHOTOS = [
     hoverText: 'Create'
   },
   {
-    url: 'https://images.unsplash.com/photo-1555680202-c86f0e12f086?q=80&w=1470&auto=format&fit=crop',
+    url: innovateImage,
     alt: 'Coding',
     rotation: 'rotate-3',
     translateY: '-translate-y-2',
@@ -57,8 +58,8 @@ export const PhotoGallery = () => {
                 {photo.hoverText}
               </span>
             </div>
-            <img 
-              src={photo.url} 
+            <img
+              src={photo.url}
               alt={photo.alt}
               className="w-full h-full object-cover"
             />

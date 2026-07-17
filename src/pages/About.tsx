@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import aboutImage from '../assets/image-1.png';
 import LogoLoop from '../components/LogoLoop';
+import ScrambledText from '../components/ScrambledText';
 import {
   SiReact, SiNextdotjs, SiTypescript, SiTailwindcss,
   SiVite, SiNodedotjs, SiPython, SiPostgresql,
@@ -49,7 +50,7 @@ export const About = () => {
         <div className="mb-16 md:mb-24 text-center">
           <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-slate-900">About <span className="text-gradient">Me</span></h2>
         </div>
-        <div className="flex flex-col md:flex-row gap-16 items-center">
+        <div className="flex flex-col md:flex-row gap-16 items-start">
           <div className="w-full md:w-1/2">
             <div className="rounded-[2.5rem] overflow-hidden group">
               <motion.img
@@ -59,13 +60,12 @@ export const About = () => {
               />
             </div>
           </div>
-          <div className="w-full md:w-1/2 space-y-6 text-slate-800 text-xl leading-relaxed font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>
-            <p>
-              Hi, I'm <strong>Bhushan Kolte</strong>, an Artificial Intelligence and Data Science student at Alard University, Pune, driven by a passion for technology, innovation, and lifelong learning. I am constantly exploring new ideas, building technical skills, and challenging myself to grow both personally and professionally.
-            </p>
-            <p>
-              My focus is on crafting modern web experiences that perfectly balance sleek visual design with seamless functionality. I add a highly personalized touch to your portfolios and websites, ensuring they truly stand out. My aim is to communicate your unique brand identity and message in the most creative way possible. As an active freelancer, I collaborate with clients to bring their next big vision to life.
-            </p>
+          <div className="w-full md:w-1/2 text-slate-800 text-xl leading-relaxed font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <ScrambledText className="space-y-6" radius={100} duration={1.2} speed={0.5} scrambleChars="0123456789!@#%&*ABCDEFGHIJKLMNOPQRSTUVWXYZ">
+              <p>
+                Hi, I'm <strong>Bhushan Kolte</strong>, an Artificial Intelligence and Data Science student at Alard University, Pune, driven by a passion for technology and innovation. I am constantly exploring new ideas, building technical skills, and challenging myself to grow both personally and professionally. My focus is on crafting modern web experiences that perfectly balance sleek visual design with seamless functionality. I add a highly personalized touch to your portfolios and websites to communicate your unique brand identity in the most creative way possible. As an active freelancer, I collaborate with clients to bring their next big vision to life.
+              </p>
+            </ScrambledText>
           </div>
         </div>
 
