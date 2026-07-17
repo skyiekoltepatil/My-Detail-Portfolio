@@ -1070,7 +1070,6 @@ export default function StickerDrag({
         }
     }, [tiltSensitivity, tiltSmoothing, ensureTickRunning, sheenMode])
 
-    if (!isMobile) return null
 
     return (
         <div
