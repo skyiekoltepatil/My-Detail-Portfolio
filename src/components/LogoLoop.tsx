@@ -102,6 +102,7 @@ export const LogoLoop = memo(({
   const dragOffsetRef = useRef(0);
   const isDraggingRef = useRef(false);
   const dragStartXRef = useRef(0);
+  const dragStartPosRef = useRef({ x: 0, y: 0 });
 
   const [seqWidth, setSeqWidth] = useState(0);
   const [seqHeight, setSeqHeight] = useState(0);
@@ -151,19 +152,40 @@ export const LogoLoop = memo(({
   const handlePointerDown = useCallback((e: React.PointerEvent) => {
     isDraggingRef.current = true;
     dragStartXRef.current = e.clientX;
-    (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+    dragStartPosRef.current = { x: e.clientX, y: e.clientY };
   }, []);
 
   const handlePointerMove = useCallback((e: React.PointerEvent) => {
     if (!isDraggingRef.current) return;
+    
+    // Only capture pointer if the user has actually dragged
+    const dx = Math.abs(e.clientX - dragStartPosRef.current.x);
+    const dy = Math.abs(e.clientY - dragStartPosRef.current.y);
+    if (dx > 3 || dy > 3) {
+      if (!(e.currentTarget as HTMLElement).hasPointerCapture(e.pointerId)) {
+        (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+      }
+    }
+
     const delta = e.clientX - dragStartXRef.current;
     dragOffsetRef.current = delta;
     dragStartXRef.current = e.clientX;
   }, []);
 
-  const handlePointerUp = useCallback(() => {
+  const handlePointerUp = useCallback((e: React.PointerEvent) => {
     isDraggingRef.current = false;
+    if ((e.currentTarget as HTMLElement).hasPointerCapture(e.pointerId)) {
+      (e.currentTarget as HTMLElement).releasePointerCapture(e.pointerId);
+    }
   }, []);
+
+  const handleWheel = useCallback((e: React.WheelEvent) => {
+    if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+      dragOffsetRef.current -= e.deltaX;
+    } else {
+      dragOffsetRef.current -= (e.deltaY * (direction === 'left' ? 1 : -1));
+    }
+  }, [direction]);
 
   const cssVars = useMemo(() => ({
     '--logoloop-gap': `${gap}px`,
@@ -190,7 +212,24 @@ export const LogoLoop = memo(({
 
     const label = isNode ? ((item as LogoNodeItem).ariaLabel ?? item.title) : ((item as LogoImgItem).alt ?? item.title);
     const wrapped = item.href
-      ? <a className="logoloop__link" href={item.href} aria-label={label || 'logo'} target="_blank" rel="noreferrer noopener">{content}</a>
+      ? <a 
+          className="logoloop__link" 
+          href={item.href}
+          draggable={false}
+          onClick={(e) => {
+            e.preventDefault();
+            const dx = Math.abs(e.clientX - dragStartPosRef.current.x);
+            const dy = Math.abs(e.clientY - dragStartPosRef.current.y);
+            if (dx <= 3 && dy <= 3) {
+              window.open(e.currentTarget.href, '_blank', 'noreferrer noopener');
+            }
+          }}
+          aria-label={label || 'logo'}
+        >
+          <div style={{ pointerEvents: 'none', display: 'flex' }}>
+            {content}
+          </div>
+        </a>
       : content;
 
     return <li className="logoloop__item" key={key} role="listitem">{wrapped}</li>;
@@ -226,7 +265,8 @@ export const LogoLoop = memo(({
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
         onPointerCancel={handlePointerUp}
-        style={{ touchAction: 'pan-y' }}
+        onWheel={handleWheel}
+        style={{ touchAction: 'none' }}
       >
         {logoLists}
       </div>

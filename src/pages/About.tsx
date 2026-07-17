@@ -13,37 +13,28 @@ import {
   SiJupyter, SiPandas, SiNumpy, SiScikitlearn, SiTensorflow,
   SiKaggle, SiOpencv, SiPlotly, SiStreamlit, SiGooglecolab, SiR,
 } from 'react-icons/si';
-import { FaLinkedin, FaMicrosoft } from 'react-icons/fa';
+import { FaLinkedin, FaFileExcel, FaChartBar } from 'react-icons/fa';
 
 const allLogos = [
-  { node: <SiReact style={{ color: '#61DAFB' }} />, title: 'React' },
-  { node: <SiNextdotjs style={{ color: '#111827' }} />, title: 'Next.js' },
-  { node: <SiTypescript style={{ color: '#3178C6' }} />, title: 'TypeScript' },
-  { node: <SiTailwindcss style={{ color: '#06B6D4' }} />, title: 'Tailwind CSS' },
-  { node: <SiVite style={{ color: '#646CFF' }} />, title: 'Vite' },
-  { node: <SiNodedotjs style={{ color: '#339933' }} />, title: 'Node.js' },
-  { node: <SiFirebase style={{ color: '#F5A623' }} />, title: 'Firebase' },
-  { node: <SiFigma style={{ color: '#F24E1E' }} />, title: 'Figma' },
-  { node: <SiVercel style={{ color: '#111827' }} />, title: 'Vercel' },
-  { node: <SiGithub style={{ color: '#181717' }} />, title: 'GitHub' },
-  { node: <FaLinkedin style={{ color: '#0A66C2' }} />, title: 'LinkedIn' },
-  { node: <SiGooglegemini style={{ color: '#886FBF' }} />, title: 'Gemini' },
-  { node: <SiAnthropic style={{ color: '#D4A27F' }} />, title: 'Claude' },
-  { node: <SiOllama style={{ color: '#111827' }} />, title: 'Ollama' },
-  { node: <SiPython style={{ color: '#3776AB' }} />, title: 'Python' },
-  { node: <SiR style={{ color: '#276DC3' }} />, title: 'R' },
-  { node: <SiJupyter style={{ color: '#F37626' }} />, title: 'Jupyter' },
-  { node: <SiGooglecolab style={{ color: '#F9AB00' }} />, title: 'Google Colab' },
-  { node: <SiPandas style={{ color: '#150458' }} />, title: 'Pandas' },
-  { node: <SiNumpy style={{ color: '#013243' }} />, title: 'NumPy' },
-  { node: <SiScikitlearn style={{ color: '#F7931E' }} />, title: 'Scikit-learn' },
-  { node: <SiTensorflow style={{ color: '#FF6F00' }} />, title: 'TensorFlow' },
-  { node: <SiOpencv style={{ color: '#5C3EE8' }} />, title: 'OpenCV' },
-  { node: <SiPlotly style={{ color: '#3F4F75' }} />, title: 'Plotly' },
-  { node: <SiStreamlit style={{ color: '#FF4B4B' }} />, title: 'Streamlit' },
-  { node: <SiKaggle style={{ color: '#20BEFF' }} />, title: 'Kaggle' },
-  { node: <SiPostgresql style={{ color: '#4169E1' }} />, title: 'PostgreSQL' },
-  { node: <FaMicrosoft style={{ color: '#5E5E5E' }} />, title: 'Power BI / Excel' },
+  { node: <SiReact style={{ color: '#61DAFB' }} />, title: 'React', href: 'https://react.dev/' },
+  { node: <SiNextdotjs style={{ color: '#111827' }} />, title: 'Next.js', href: 'https://nextjs.org/' },
+  { node: <SiTypescript style={{ color: '#3178C6' }} />, title: 'TypeScript', href: 'https://www.typescriptlang.org/' },
+  { node: <SiTailwindcss style={{ color: '#06B6D4' }} />, title: 'Tailwind CSS', href: 'https://tailwindcss.com/' },
+  { node: <SiVite style={{ color: '#646CFF' }} />, title: 'Vite', href: 'https://vitejs.dev/' },
+  { node: <SiNodedotjs style={{ color: '#339933' }} />, title: 'Node.js', href: 'https://nodejs.org/' },
+  { node: <SiFirebase style={{ color: '#F5A623' }} />, title: 'Firebase', href: 'https://firebase.google.com/' },
+  { node: <SiFigma style={{ color: '#F24E1E' }} />, title: 'Figma', href: 'https://www.figma.com/' },
+  { node: <SiVercel style={{ color: '#111827' }} />, title: 'Vercel', href: 'https://vercel.com/' },
+  { node: <SiGithub style={{ color: '#181717' }} />, title: 'GitHub', href: 'https://github.com/' },
+  { node: <FaLinkedin style={{ color: '#0A66C2' }} />, title: 'LinkedIn', href: 'https://www.linkedin.com/' },
+  { node: <SiGooglegemini style={{ color: '#886FBF' }} />, title: 'Gemini', href: 'https://gemini.google.com/' },
+  { node: <SiAnthropic style={{ color: '#D4A27F' }} />, title: 'Claude', href: 'https://claude.ai/' },
+  { node: <SiOllama style={{ color: '#111827' }} />, title: 'Ollama', href: 'https://ollama.com/' },
+  { node: <SiPython style={{ color: '#3776AB' }} />, title: 'Python', href: 'https://www.python.org/' },
+  { node: <SiKaggle style={{ color: '#20BEFF' }} />, title: 'Kaggle', href: 'https://www.kaggle.com/' },
+  { node: <SiPostgresql style={{ color: '#4169E1' }} />, title: 'PostgreSQL', href: 'https://www.postgresql.org/' },
+  { node: <FaFileExcel style={{ color: '#217346' }} />, title: 'Excel', href: 'https://www.microsoft.com/en-us/microsoft-365/excel' },
+  { node: <FaChartBar style={{ color: '#F2C811' }} />, title: 'Power BI', href: 'https://powerbi.microsoft.com/' },
 ];
 
 export const About = () => {
@@ -75,7 +66,7 @@ export const About = () => {
         }
       })
       .catch(err => console.error(err));
-      
+
     // Fetch real-time today commits
     getTodayCommits(username).then(commits => {
       setRealtimeCommits(commits);
@@ -84,16 +75,16 @@ export const About = () => {
 
   const transformCalendarData = (data: Array<any>) => {
     if (realtimeCommits === 0) return data;
-    
+
     const todayStr = new Date().toISOString().split('T')[0];
     const todayIndex = data.findIndex(d => d.date === todayStr);
-    
+
     if (todayIndex !== -1) {
-       // If the API is lagging behind the real-time events, update it
-       if (data[todayIndex].count < realtimeCommits) {
-         data[todayIndex].count = realtimeCommits;
-         data[todayIndex].level = realtimeCommits >= 10 ? 4 : realtimeCommits >= 5 ? 3 : realtimeCommits >= 2 ? 2 : 1;
-       }
+      // If the API is lagging behind the real-time events, update it
+      if (data[todayIndex].count < realtimeCommits) {
+        data[todayIndex].count = realtimeCommits;
+        data[todayIndex].level = realtimeCommits >= 10 ? 4 : realtimeCommits >= 5 ? 3 : realtimeCommits >= 2 ? 2 : 1;
+      }
     }
     return data;
   };
@@ -176,7 +167,7 @@ export const About = () => {
                     Technologies I Work With
                   </p>
                   <div style={{ height: '60px', position: 'relative', fontFamily: "sans-serif" }}>
-                    <LogoLoop logos={allLogos} speed={90} direction="left" logoHeight={36} gap={40} hoverSpeed={0} scaleOnHover fadeOut fadeOutColor="#ffffff" />
+                    <LogoLoop logos={allLogos} speed={90} direction="left" logoHeight={36} gap={40} scaleOnHover fadeOut fadeOutColor="#ffffff" />
                   </div>
                 </div>
               </div>
