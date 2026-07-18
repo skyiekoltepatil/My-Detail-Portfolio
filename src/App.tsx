@@ -10,8 +10,8 @@ import { Quote } from './pages/Quote';
 import { ContactSection } from './components/ContactSection';
 import { QuoteSection } from './components/QuoteSection';
 import { AboutSection } from './components/AboutSection';
-
 import { PhotoGallery } from './components/PhotoGallery';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 const FullHomePage = () => (
   <>
@@ -26,18 +26,21 @@ const FullHomePage = () => (
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<FullHomePage />} />
-          <Route path="about" element={<About />} />
-          <Route path="experience" element={<Experience />} />
-          <Route path="hobbies" element={<Hobbies />} />
-          <Route path="fun-games" element={<FunGames />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="quote" element={<Quote />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<FullHomePage />} />
+            <Route path="about" element={<About />} />
+            <Route path="experience" element={<Experience />} />
+            <Route path="hobbies" element={<Hobbies />} />
+            <Route path="fun-games" element={<FunGames />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="quote" element={<Quote />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+      <SpeedInsights />
+    </>
   );
 }
