@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { CustomCursor, BackgroundEffects } from './Shared';
+import { CustomCursor, BackgroundEffects } from '../effects/Shared';
 // @ts-ignore
-import CursorGrid from './CursorGrid';
+import CursorGrid from '../effects/CursorGrid';
 
 const AppleLogo = () => (
   <svg viewBox="0 0 384 512" className="w-5 h-5 sm:w-6 sm:h-6 text-white hover:scale-110 transition-transform" fill="currentColor">
@@ -101,7 +101,7 @@ const Navbar = () => {
 
 export const Layout = () => {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-purple-200 selection:text-purple-900 flex flex-col">
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-purple-200 selection:text-purple-900 flex flex-col overflow-x-hidden w-full relative">
       <CustomCursor />
       <BackgroundEffects />
 

@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import ScribblePad from '../components/games/ScribblePad';
-import ErrorBoundary from '../components/effects/ErrorBoundary';
-import MacbookStickers from '../components/games/MacbookStickers';
+import ScribblePad from '../../components/games/ScribblePad';
+import ErrorBoundary from '../../components/effects/ErrorBoundary';
+import MacbookStickers from '../../components/games/MacbookStickers';
 
-import TicTacToe from '../components/games/TicTacToe';
-import MemoryMatch from '../components/games/MemoryMatch';
-import SnakeGame from '../components/games/SnakeGame';
+import TicTacToe from '../../components/games/TicTacToe';
+import MemoryMatch from '../../components/games/MemoryMatch';
+import SnakeGame from '../../components/games/SnakeGame';
 
 
 /* ──────────────────────────────────────────────

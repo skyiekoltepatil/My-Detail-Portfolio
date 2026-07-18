@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import githubImage from '../assets/github-image.jpeg';
-import LogoLoop from '../components/effects/LogoLoop';
+import githubImage from '../../assets/github-image.jpeg';
+import LogoLoop from '../../components/effects/LogoLoop';
 import { GitHubCalendar } from 'react-github-calendar';
 import { Users, BookOpen, Star, GitFork, MapPin, Mail, Building2 } from 'lucide-react';
-import { getTodayCommits } from '../utils/github';
+import { getTodayCommits } from '../../utils/github';
 import {
   SiReact, SiNextdotjs, SiTypescript, SiTailwindcss,
   SiVite, SiNodedotjs, SiPython, SiPostgresql,

@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import workingGif from '../assets/workinggif.mp4';
-import RotatingText from '../components/effects/RotatingText';
+import workingGif from '../../assets/workinggif.mp4';
+import RotatingText from '../../components/effects/RotatingText';
 
 export const Home = () => {
   const { scrollY } = useScroll();

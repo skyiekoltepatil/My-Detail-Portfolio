@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-import aboutImage from '../assets/image-1.png';
-import LogoLoop from './LogoLoop';
-import ScrambledText from './ScrambledText';
+import aboutImage from '../../assets/image-1.png';
+import LogoLoop from '../effects/LogoLoop';
+import ScrambledText from '../effects/ScrambledText';
 import {
   SiReact, SiNextdotjs, SiTypescript, SiTailwindcss,
   SiVite, SiNodedotjs, SiPython, SiPostgresql,

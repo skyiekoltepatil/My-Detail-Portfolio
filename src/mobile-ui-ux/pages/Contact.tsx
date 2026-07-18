@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Mail, Phone, Calendar, MapPin, Send } from 'lucide-react';
-import AvatarImage from '../assets/Avatar-1-image.png';
-import { MagneticElement } from '../components/effects/Shared';
+import AvatarImage from '../../assets/Avatar-1-image.png';
+import { MagneticElement } from '../../components/effects/Shared';
 
 export const Contact = () => {
   const GithubIcon = ({ size = 20, className = "" }: { size?: number, className?: string }) => (

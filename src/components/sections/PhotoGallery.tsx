@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import innovateImage from '../assets/INNOVATE-image.jpeg';
+import innovateImage from '../../assets/INNOVATE-image.jpeg';
 
 const PHOTOS = [
   {
