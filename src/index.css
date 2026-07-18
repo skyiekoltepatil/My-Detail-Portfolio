@@ -8,11 +8,23 @@
     scroll-behavior: smooth;
     background-color: #f8fafc;
     color: #334155;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  html::-webkit-scrollbar {
+    display: none;
   }
 
   body {
     background-color: #f8fafc;
     overflow-x: hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
   }
 
   h1, h2 {
