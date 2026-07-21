@@ -55,6 +55,14 @@ const PROJECTS = [
     image: Project3Image,
     link: 'https://github.com/skyiekoltepatil/Login-Interface',
     github: 'https://github.com/skyiekoltepatil/Login-Interface'
+  },
+  {
+    title: 'Adaptive Web Design',
+    description: 'A responsive and adaptive web design focusing on an optimal user experience seamlessly across all devices and screen sizes.',
+    tech: ['React', 'Tailwind CSS', 'Framer Motion'],
+    image: Project1Image,
+    link: 'https://github.com/skyiekoltepatil',
+    github: 'https://github.com/skyiekoltepatil'
   }
 ];
 

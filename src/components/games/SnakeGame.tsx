@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { motion } from 'framer-motion';
 
-const GRID = 24;
+const GRID = 12;
 const CELL = 20;
 
 const SnakeGame = () => {
@@ -121,7 +121,37 @@ const SnakeGame = () => {
         height={GRID * CELL}
         style={{ borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)' }}
       />
-      <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: 12, fontFamily: "'Outfit', sans-serif" }}>
+      {/* Mobile Controls */}
+      <div className="grid grid-cols-3 gap-2 sm:hidden mt-2">
+        <div />
+        <button 
+          onPointerDown={(e) => { e.preventDefault(); const d = dirRef.current; if (d.y !== 1) dirRef.current = { x: 0, y: -1 }; }} 
+          className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-white/70 active:bg-white/20 touch-none"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+        </button>
+        <div />
+        <button 
+          onPointerDown={(e) => { e.preventDefault(); const d = dirRef.current; if (d.x !== 1) dirRef.current = { x: -1, y: 0 }; }} 
+          className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-white/70 active:bg-white/20 touch-none"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button 
+          onPointerDown={(e) => { e.preventDefault(); const d = dirRef.current; if (d.y !== -1) dirRef.current = { x: 0, y: 1 }; }} 
+          className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-white/70 active:bg-white/20 touch-none"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <button 
+          onPointerDown={(e) => { e.preventDefault(); const d = dirRef.current; if (d.x !== -1) dirRef.current = { x: 1, y: 0 }; }} 
+          className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-white/70 active:bg-white/20 touch-none"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+
+      <p className="hidden sm:block" style={{ color: 'rgba(255,255,255,0.4)', fontSize: 12, fontFamily: "'Outfit', sans-serif" }}>
         Use Arrow Keys or WASD to move
       </p>
       {gameOver && (

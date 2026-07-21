@@ -33,14 +33,14 @@ export const Contact = () => {
             <div className="w-32 h-32 bg-blue-100 rounded-3xl mb-6 flex items-center justify-center shadow-inner border border-blue-200 overflow-hidden">
               <img src={AvatarImage} alt="Bhushan Kolte" className="w-full h-full object-cover" />
             </div>
-            
+
             <h2 className="text-2xl font-bold text-slate-800 mb-2">Bhushan Kolte</h2>
             <div className="px-4 py-1.5 bg-blue-100 text-blue-700 text-sm font-semibold rounded-lg mb-8">
               Creative Developer
             </div>
-            
+
             <div className="w-full h-px bg-slate-100 mb-8"></div>
-            
+
             <div className="flex flex-col gap-6 w-full mb-8">
               {/* Email */}
               <a href="mailto:bhushankolte20@gmail.com" className="flex items-center gap-4 group">
@@ -52,7 +52,7 @@ export const Contact = () => {
                   <p className="text-sm font-semibold text-slate-700 group-hover:text-blue-600 transition-colors">Send a message</p>
                 </div>
               </a>
-              
+
               {/* Phone */}
               <a href="tel:+918421361302" className="flex items-center gap-4 group">
                 <div className="w-12 h-12 bg-slate-50 border border-slate-100 rounded-xl flex items-center justify-center group-hover:bg-green-50 group-hover:border-green-200 transition-colors shadow-sm">
@@ -82,11 +82,11 @@ export const Contact = () => {
                 </div>
                 <div>
                   <p className="text-xs font-bold text-slate-400 mb-0.5">LOCATION</p>
-                  <p className="text-sm font-semibold text-slate-700 leading-tight">Pune, Maharashtra,<br/>India</p>
+                  <p className="text-sm font-semibold text-slate-700 leading-tight">Pune, Maharashtra,<br />India</p>
                 </div>
               </div>
             </div>
-            
+
             <div className="flex gap-4 mt-auto pt-4">
               <a href="https://github.com/skyiekoltepatil" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-slate-800 transition-colors">
                 <GithubIcon size={20} />
@@ -101,16 +101,16 @@ export const Contact = () => {
           <div className="w-full lg:w-2/3 bg-white p-6 sm:p-10 rounded-[2rem] shadow-xl shadow-slate-200/50 border border-slate-200/60">
             <h2 className="text-3xl md:text-4xl font-extrabold text-slate-800 mb-2">Contact</h2>
             <div className="w-12 h-1.5 bg-blue-600 rounded-full mb-8"></div>
-            
+
             {/* Map Section */}
             <div className="w-full h-[250px] md:h-[350px] rounded-3xl overflow-hidden border border-slate-100 bg-slate-50 mb-10 shadow-sm relative group">
-              <iframe 
-                src="https://maps.google.com/maps?q=Pune,+Maharashtra&t=&z=11&ie=UTF8&iwloc=&output=embed" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen={false} 
-                loading="lazy" 
+              <iframe
+                src="https://maps.google.com/maps?q=Pune,+Maharashtra&t=&z=11&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={false}
+                loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="filter contrast-[0.95]"
               ></iframe>
@@ -118,23 +118,23 @@ export const Contact = () => {
 
             {/* Contact Form Section */}
             <h3 className="text-2xl font-bold text-slate-800 mb-6">Contact Form</h3>
-            
+
             <form className="flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <input 
-                  type="text" 
-                  placeholder="Full name" 
+                <input
+                  type="text"
+                  placeholder="Full name"
                   className="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl outline-none focus:border-blue-400 focus:ring-4 focus:ring-blue-50 transition-all font-semibold text-slate-700 placeholder:text-slate-400 shadow-sm"
                 />
-                <input 
-                  type="email" 
-                  placeholder="Email address" 
+                <input
+                  type="email"
+                  placeholder="Email address"
                   className="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl outline-none focus:border-blue-400 focus:ring-4 focus:ring-blue-50 transition-all font-semibold text-slate-700 placeholder:text-slate-400 shadow-sm"
                 />
               </div>
-              
-              <textarea 
-                placeholder="Your Message" 
+
+              <textarea
+                placeholder="Your Message"
                 rows={5}
                 className="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl outline-none focus:border-blue-400 focus:ring-4 focus:ring-blue-50 transition-all font-semibold text-slate-700 placeholder:text-slate-400 resize-none shadow-sm"
               ></textarea>

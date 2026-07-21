@@ -1170,7 +1170,7 @@ const MacbookStickers = () => {
     <div style={{
       width: '100%',
       height: '100%',
-      minHeight: '800px',
+      minHeight: '400px',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',

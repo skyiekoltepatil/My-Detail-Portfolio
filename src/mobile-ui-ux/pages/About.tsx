@@ -108,7 +108,7 @@ export const About = () => {
             </div>
 
             <div>
-              <h1 className="text-2xl font-bold text-slate-900 leading-tight">Bhushan Kolte</h1>
+              <h1 className="text-2xl font-bold text-black leading-tight">Bhushan Kolte</h1>
               <h2 className="text-xl font-light text-slate-500">{username}</h2>
             </div>
 
@@ -166,7 +166,7 @@ export const About = () => {
                     Technologies I Work With
                   </p>
                   <div style={{ height: '60px', position: 'relative', fontFamily: "sans-serif" }}>
-                    <LogoLoop logos={allLogos} speed={90} direction="left" logoHeight={36} gap={40} scaleOnHover fadeOut fadeOutColor="#ffffff" />
+                    <LogoLoop logos={allLogos} speed={90} direction="left" logoHeight={36} gap={40} scaleOnHover />
                   </div>
                 </div>
               </div>

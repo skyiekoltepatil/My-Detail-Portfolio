@@ -56,9 +56,9 @@ const TicTacToe = () => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem', padding: '1rem' }}>
       <p style={{ color: 'white', fontSize: 18, fontWeight: 600, fontFamily: "'Outfit', sans-serif" }}>
-        {winner ? `${winner} Wins! 🎉` : isDraw ? "It's a Draw!" : `Your Turn (X)`}
+        {winner ? `${winner} Wins! 🎉` : isDraw ? "It's a Draw!" : `Your Turn (${xIsNext ? 'X' : 'O'})`}
       </p>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 6, width: 240, height: 240 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gridTemplateRows: 'repeat(3, 1fr)', gap: 6, width: 240, height: 240 }}>
         {board.map((cell, i) => (
           <motion.button
             key={i}

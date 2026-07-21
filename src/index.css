@@ -5,11 +5,29 @@
 @tailwind utilities;
 @layer base {
   html {
+    font-size: 16px; /* Base size for large screens */
     scroll-behavior: smooth;
     background-color: #f8fafc;
     color: #334155;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+  }
+
+  /* Smoothly scale down all sizes (fonts, paddings, margins) on smaller devices */
+  @media (max-width: 1440px) {
+    html { font-size: 15px; } /* Laptops */
+  }
+  
+  @media (max-width: 1024px) {
+    html { font-size: 14px; } /* Tablets & Small Laptops */
+  }
+  
+  @media (max-width: 768px) {
+    html { font-size: 14px; } /* Mobile */
+  }
+
+  @media (max-width: 480px) {
+    html { font-size: 13px; } /* Small Mobile */
   }
 
   html::-webkit-scrollbar {
@@ -27,22 +45,11 @@
     display: none;
   }
 
-  h1, h2 {
-    font-family: 'Algetura', cursive !important;
-    color: #582A22 !important;
-  }
-
-  h1 *,
-  h2 * {
-    color: #582A22 !important;
-    background: none !important;
-    -webkit-text-fill-color: #582A22 !important;
-  }
 }
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600;
+    @apply text-black;
   }
 
   .glass-panel {

@@ -29,9 +29,10 @@ const games: GameDef[] = [
     gradient: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%)',
     icon: (
       <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-        <path d="M8 40L16 32L24 36L32 24L40 28" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M36 8L40 12L20 32L16 32L16 28L36 8Z" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-        <circle cx="12" cy="16" r="4" stroke="white" strokeWidth="2" />
+        <path d="M14 34L18 38L34 22L30 18L14 34Z" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M34 22L38 18C39.1 16.9 39.1 15.1 38 14C36.9 12.9 35.1 12.9 34 14L30 18" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M14 34L11 41L18 38" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M22 40C26 44 32 44 36 40" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeDasharray="4 4" />
       </svg>
     ),
   },
@@ -42,12 +43,13 @@ const games: GameDef[] = [
     gradient: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)',
     icon: (
       <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-        <line x1="16" y1="8" x2="16" y2="40" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
-        <line x1="32" y1="8" x2="32" y2="40" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
-        <line x1="8" y1="16" x2="40" y2="16" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
-        <line x1="8" y1="32" x2="40" y2="32" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
-        <circle cx="24" cy="24" r="4" stroke="white" strokeWidth="2" />
-        <path d="M10 10L14 14M14 10L10 14" stroke="white" strokeWidth="2" strokeLinecap="round" />
+        <line x1="18" y1="10" x2="18" y2="38" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
+        <line x1="30" y1="10" x2="30" y2="38" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
+        <line x1="10" y1="18" x2="38" y2="18" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
+        <line x1="10" y1="30" x2="38" y2="30" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
+        <circle cx="24" cy="24" r="3.5" stroke="#FF6B6B" strokeWidth="3" />
+        <path d="M11 11L15 15M15 11L11 15" stroke="#4DABF7" strokeWidth="3" strokeLinecap="round" />
+        <path d="M33 33L37 37M37 33L33 37" stroke="#4DABF7" strokeWidth="3" strokeLinecap="round" />
       </svg>
     ),
   },
@@ -72,9 +74,9 @@ const games: GameDef[] = [
     gradient: 'linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%)',
     icon: (
       <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-        <path d="M8 24C8 18 12 14 18 14C24 14 24 22 30 22C36 22 40 18 40 14" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
-        <circle cx="40" cy="14" r="3" fill="white" />
-        <rect x="20" y="32" width="6" height="6" rx="1" fill="white" opacity="0.5" />
+        <path d="M10 32H18V24H26V16H34" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="34" cy="16" r="2" fill="#69DB7C" />
+        <rect x="22" y="32" width="5" height="5" rx="1" fill="#FF6B6B" />
       </svg>
     ),
   },
