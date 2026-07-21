@@ -18,7 +18,7 @@ export const ContactSection = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl mx-auto">
             {/* Email Card */}
-            <a 
+            <a
               href="mailto:bhushankolte20@gmail.com"
               className="flex flex-col items-center justify-center p-10 bg-slate-50 rounded-[2rem] border border-slate-100 hover:border-blue-200 hover:bg-blue-50/50 hover:shadow-lg hover:-translate-y-1 transition-all group text-center"
             >
@@ -30,7 +30,7 @@ export const ContactSection = () => {
             </a>
 
             {/* Phone Card */}
-            <a 
+            <a
               href="tel:+918421361302"
               className="flex flex-col items-center justify-center p-10 bg-slate-50 rounded-[2rem] border border-slate-100 hover:border-green-200 hover:bg-green-50/50 hover:shadow-lg hover:-translate-y-1 transition-all group text-center"
             >

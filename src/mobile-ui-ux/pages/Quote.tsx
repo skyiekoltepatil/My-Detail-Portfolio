@@ -28,7 +28,7 @@ export const Quote = () => {
               "
             </span>
             <div className="relative z-10">
-              <p className="quote-text text-4xl md:text-5xl lg:text-7xl font-black italic tracking-tight leading-tight mb-8">
+              <p className="quote-text text-4xl md:text-5xl lg:text-7xl font-black italic tracking-tight leading-tight mb-8 py-4 px-4 md:py-6 md:px-8">
                 You can sleep while you are dead.
               </p>
               
@@ -53,7 +53,7 @@ export const Quote = () => {
               "
             </span>
             <div className="relative z-10">
-              <p className="quote-text text-4xl md:text-5xl lg:text-7xl font-black italic tracking-tight leading-tight mb-8">
+              <p className="quote-text text-4xl md:text-5xl lg:text-7xl font-black italic tracking-tight leading-tight mb-8 py-4 px-4 md:py-6 md:px-8">
                 Don't forget who you are mate.
               </p>
               

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import aboutImage from '../../assets/image-1.png';
 import LogoLoop from '../effects/LogoLoop';
-import ScrambledText from '../effects/ScrambledText';
+
 import {
   SiReact, SiNextdotjs, SiTypescript, SiTailwindcss,
   SiVite, SiNodedotjs, SiPython, SiPostgresql,
@@ -51,11 +51,11 @@ export const AboutSection = () => {
             </div>
           </div>
           <div className="w-full md:w-1/2 text-slate-800 text-xl leading-relaxed font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>
-            <ScrambledText className="space-y-6" radius={100} duration={1.2} speed={0.5} scrambleChars="0123456789!@#%&*ABCDEFGHIJKLMNOPQRSTUVWXYZ">
+            <div className="space-y-6">
               <p>
                 Hi, I'm <strong>Bhushan Kolte</strong>, an Artificial Intelligence and Data Science student at Alard University, Pune, driven by a passion for technology and innovation. I am constantly exploring new ideas, building technical skills, and challenging myself to grow both personally and professionally. My focus is on crafting modern web experiences that perfectly balance sleek visual design with seamless functionality. I add a highly personalized touch to your portfolios and websites to communicate your unique brand identity in the most creative way possible. As an active freelancer, I collaborate with clients to bring their next big vision to life.
               </p>
-            </ScrambledText>
+            </div>
           </div>
         </div>
 
