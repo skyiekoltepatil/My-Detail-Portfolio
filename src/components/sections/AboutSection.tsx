@@ -73,7 +73,7 @@ export const AboutSection = () => {
           <div style={{ height: '80px', position: 'relative' }}>
             <LogoLoop
               logos={allLogos}
-              speed={90}
+              speed={45}
               direction="left"
               logoHeight={44}
               gap={56}

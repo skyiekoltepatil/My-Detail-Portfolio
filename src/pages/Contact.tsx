@@ -49,7 +49,7 @@ export const Contact = () => {
                 </div>
                 <div>
                   <p className="text-xs font-bold text-slate-400 mb-0.5">EMAIL</p>
-                  <p className="text-sm font-semibold text-slate-700 group-hover:text-blue-600 transition-colors">Send a message</p>
+                  <p className="text-sm font-semibold text-slate-700 group-hover:text-blue-600 transition-colors">bhushankolte20@gmail.com</p>
                 </div>
               </a>
 
@@ -60,7 +60,7 @@ export const Contact = () => {
                 </div>
                 <div>
                   <p className="text-xs font-bold text-slate-400 mb-0.5">PHONE</p>
-                  <p className="text-sm font-semibold text-slate-700 group-hover:text-green-600 transition-colors">Give me a ring</p>
+                  <p className="text-sm font-semibold text-slate-700 group-hover:text-green-600 transition-colors">+91 8421361302</p>
                 </div>
               </a>
 

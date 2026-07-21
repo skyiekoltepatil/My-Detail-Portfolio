@@ -26,7 +26,6 @@ export const ContactSection = () => {
                 <Mail size={32} className="text-slate-700 group-hover:text-blue-600 transition-colors" />
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-2">Email Me</h3>
-              <p className="text-slate-600 font-medium group-hover:text-blue-700 transition-colors">Send a message</p>
             </a>
 
             {/* Phone Card */}
@@ -38,7 +37,6 @@ export const ContactSection = () => {
                 <Phone size={32} className="text-slate-700 group-hover:text-green-600 transition-colors" />
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-2">Call Me</h3>
-              <p className="text-slate-600 font-medium group-hover:text-green-700 transition-colors">Give me a ring</p>
             </a>
           </div>
         </motion.div>

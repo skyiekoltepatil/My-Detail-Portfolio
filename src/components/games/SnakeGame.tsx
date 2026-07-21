@@ -89,12 +89,12 @@ const SnakeGame = () => {
       }
       draw();
 
-      // Start at 220ms, get 6ms faster for each food eaten, cap at 50ms
-      const speed = Math.max(50, 220 - (snakeRef.current.length - 1) * 6);
+      // Start at 300ms, get 5ms faster for each food eaten, cap at 100ms
+      const speed = Math.max(100, 300 - (snakeRef.current.length - 1) * 5);
       intervalRef.current = window.setTimeout(gameTick, speed);
     };
 
-    intervalRef.current = window.setTimeout(gameTick, 220);
+    intervalRef.current = window.setTimeout(gameTick, 300);
     return () => { if (intervalRef.current) clearTimeout(intervalRef.current); };
   }, [gameKey, draw, spawnFood]);
 

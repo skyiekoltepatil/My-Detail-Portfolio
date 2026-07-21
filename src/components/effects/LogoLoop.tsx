@@ -168,7 +168,7 @@ export const LogoLoop = memo(({
     }
 
     const delta = e.clientX - dragStartXRef.current;
-    dragOffsetRef.current = delta;
+    dragOffsetRef.current += delta;
     dragStartXRef.current = e.clientX;
   }, []);
 

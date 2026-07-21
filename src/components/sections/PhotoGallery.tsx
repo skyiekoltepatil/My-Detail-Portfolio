@@ -13,14 +13,14 @@ const PHOTOS = [
   {
     url: innovateImage,
     alt: 'Coding',
-    rotation: 'rotate-3',
+    rotation: 'rotate-6',
     translateY: '-translate-y-2',
     hoverText: 'Innovate'
   },
   {
     url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1473&auto=format&fit=crop',
     alt: 'Sunset',
-    rotation: '-rotate-2',
+    rotation: '-rotate-6',
     translateY: '-translate-y-6',
     hoverText: 'Inspire'
   },
@@ -34,8 +34,8 @@ const PHOTOS = [
   {
     url: 'https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1470&auto=format&fit=crop',
     alt: 'Portrait',
-    rotation: '-rotate-3',
-    translateY: 'translate-y-4',
+    rotation: '-rotate-6',
+    translateY: 'translate-y-0',
     hoverText: 'Grow'
   }
 ];

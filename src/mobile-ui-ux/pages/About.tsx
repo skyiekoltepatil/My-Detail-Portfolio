@@ -166,7 +166,7 @@ export const About = () => {
                     Technologies I Work With
                   </p>
                   <div style={{ height: '60px', position: 'relative', fontFamily: "sans-serif" }}>
-                    <LogoLoop logos={allLogos} speed={90} direction="left" logoHeight={36} gap={40} scaleOnHover />
+                    <LogoLoop logos={allLogos} speed={45} direction="left" logoHeight={36} gap={40} scaleOnHover />
                   </div>
                 </div>
               </div>
