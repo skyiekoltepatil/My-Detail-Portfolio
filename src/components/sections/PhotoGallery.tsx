@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion';
 import innovateImage from '../../assets/INNOVATE-image.jpeg';
+import gymImage from '../../assets/GYM-image.png';
 
 const PHOTOS = [
   {
-    url: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop',
+    url: gymImage,
     alt: 'Gym',
     rotation: '-rotate-6',
     translateY: 'translate-y-4',
