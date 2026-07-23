@@ -69,7 +69,6 @@ export default function App() {
               <Route path="contact" element={<ContactMobile />} />
               <Route path="quote" element={<QuoteMobile />} />
               <Route path="admin" element={<AdminMessages />} />
-              <Route path="messages" element={<AdminMessages />} />
             </Route>
           </Routes>
         ) : (
@@ -83,7 +82,6 @@ export default function App() {
               <Route path="contact" element={<ContactDesktop />} />
               <Route path="quote" element={<QuoteDesktop />} />
               <Route path="admin" element={<AdminMessages />} />
-              <Route path="messages" element={<AdminMessages />} />
             </Route>
           </Routes>
         )}

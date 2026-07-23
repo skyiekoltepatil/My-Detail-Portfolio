@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Mail, Phone, Calendar, MapPin, Inbox } from 'lucide-react';
+import { Mail, Phone, Calendar, MapPin } from 'lucide-react';
 import AvatarImage from '../../assets/Avatar-1-image.png';
 import { ContactForm } from '../../components/ContactForm';
 
@@ -88,17 +87,13 @@ export const Contact = () => {
               </div>
             </div>
 
-            <div className="flex items-center gap-4 mt-auto pt-4 w-full">
+            <div className="flex gap-4 mt-auto pt-4">
               <a href="https://github.com/skyiekoltepatil" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-slate-800 transition-colors">
                 <GithubIcon size={20} />
               </a>
               <a href="#" className="text-slate-400 hover:text-blue-600 transition-colors">
                 <LinkedinIcon size={20} />
               </a>
-              <Link to="/admin" className="text-slate-500 hover:text-blue-600 transition-colors flex items-center gap-1.5 text-xs font-semibold bg-slate-50 border border-slate-200 px-3 py-1.5 rounded-xl ml-auto hover:border-blue-300 shadow-sm" title="View Messages Database">
-                <Inbox size={15} className="text-blue-600" />
-                <span>Messages</span>
-              </Link>
             </div>
           </div>
 
