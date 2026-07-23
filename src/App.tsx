@@ -21,6 +21,8 @@ import { FunGames as FunGamesMobile } from './mobile-ui-ux/pages/FunGames';
 import { Contact as ContactMobile } from './mobile-ui-ux/pages/Contact';
 import { Quote as QuoteMobile } from './mobile-ui-ux/pages/Quote';
 
+import { AdminMessages } from './pages/AdminMessages';
+
 // Shared Sections for Full Home Page
 import { ContactSection } from './components/sections/ContactSection';
 import { QuoteSection } from './components/sections/QuoteSection';
@@ -66,6 +68,8 @@ export default function App() {
               <Route path="fun-games" element={<FunGamesMobile />} />
               <Route path="contact" element={<ContactMobile />} />
               <Route path="quote" element={<QuoteMobile />} />
+              <Route path="admin" element={<AdminMessages />} />
+              <Route path="messages" element={<AdminMessages />} />
             </Route>
           </Routes>
         ) : (
@@ -78,6 +82,8 @@ export default function App() {
               <Route path="fun-games" element={<FunGamesDesktop />} />
               <Route path="contact" element={<ContactDesktop />} />
               <Route path="quote" element={<QuoteDesktop />} />
+              <Route path="admin" element={<AdminMessages />} />
+              <Route path="messages" element={<AdminMessages />} />
             </Route>
           </Routes>
         )}
