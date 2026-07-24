@@ -91,7 +91,7 @@ export const Contact = () => {
               <a href="https://github.com/skyiekoltepatil" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-slate-800 transition-colors">
                 <GithubIcon size={20} />
               </a>
-              <a href="#" className="text-slate-400 hover:text-blue-600 transition-colors">
+              <a href="https://www.linkedin.com/in/bhushan-kolte-458561380/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-blue-600 transition-colors">
                 <LinkedinIcon size={20} />
               </a>
             </div>
