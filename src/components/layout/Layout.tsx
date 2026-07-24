@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { CustomCursor, BackgroundEffects } from '../effects/Shared';
 // @ts-ignore
 import CursorGrid from '../effects/CursorGrid';
+import { AIAssistant } from '../assistant/AIAssistant';
 
 const AppleLogo = () => (
   <svg viewBox="0 0 384 512" className="w-5 h-5 sm:w-6 sm:h-6 text-white hover:scale-110 transition-transform" fill="currentColor">
@@ -125,6 +126,7 @@ export const Layout = () => {
       </div>
 
       <Navbar />
+      <AIAssistant />
 
       <main className="flex-grow pt-24">
         <Outlet />
