@@ -66,21 +66,23 @@ const ProjectContent = ({ project }: { project: ProjectProps }) => {
           <p className="text-gray-900 font-sans text-base leading-relaxed md:text-lg">
             {projectData.description}
           </p>
-          <div className="pt-4">
-            <h3 className="mb-3 text-sm tracking-wide text-gray-500 uppercase">
-              Technologies
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {projectData.techStack.map((tech, index) => (
-                <span
-                  key={index}
-                  className="rounded-full bg-gray-200 px-3 py-1 text-sm text-gray-800"
-                >
-                  {tech}
-                </span>
-              ))}
+          {projectData.techStack && projectData.techStack.length > 0 && (
+            <div className="pt-4">
+              <h3 className="mb-3 text-sm tracking-wide text-gray-500 uppercase">
+                Technologies
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {projectData.techStack.map((tech, index) => (
+                  <span
+                    key={index}
+                    className="rounded-full bg-gray-200 px-3 py-1 text-sm text-gray-800"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
 
