@@ -72,7 +72,7 @@ const ProjectContent = ({ project }: { project: ProjectProps }) => {
                 Technologies
               </h3>
               <div className="flex flex-wrap gap-2">
-                {projectData.techStack.map((tech, index) => (
+                {projectData.techStack?.map((tech, index) => (
                   <span
                     key={index}
                     className="rounded-full bg-gray-200 px-3 py-1 text-sm text-gray-800"
@@ -96,7 +96,7 @@ const ProjectContent = ({ project }: { project: ProjectProps }) => {
           </div>
           <hr className="my-4 border-gray-200" />
           <div className="space-y-3">
-            {projectData.links.map((link, index) => (
+            {projectData.links?.map((link, index) => (
               <a
                 key={index}
                 href={link.url}
@@ -115,7 +115,7 @@ const ProjectContent = ({ project }: { project: ProjectProps }) => {
       {projectData.images && projectData.images.length > 0 && (
         <div className="space-y-6">
           <div className="grid grid-cols-1 gap-4">
-            {projectData.images.map((image, index) => (
+            {projectData.images?.map((image, index) => (
               <div
                 key={index}
                 className="relative aspect-video overflow-hidden rounded-2xl"
