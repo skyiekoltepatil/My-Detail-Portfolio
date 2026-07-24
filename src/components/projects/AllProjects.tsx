@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Link } from "react-router-dom";
 import { Card, Carousel } from "./apple-cards-carousel";
 import { data } from "./Data";

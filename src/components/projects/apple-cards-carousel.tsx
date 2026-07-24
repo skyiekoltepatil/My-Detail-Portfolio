@@ -128,7 +128,6 @@ export const Carousel = ({
                     duration: 0.5,
                     delay: 0.2 * index,
                     ease: 'easeOut',
-                    once: true,
                   },
                 }}
                 key={'card' + index}
@@ -170,7 +169,7 @@ export const Card = ({
   layout?: boolean;
 }) => {
   const [open, setOpen] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null!);
   const { onCardClose } = useContext(CarouselContext);
 
   useEffect(() => {

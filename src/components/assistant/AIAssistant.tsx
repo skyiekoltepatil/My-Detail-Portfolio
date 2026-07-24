@@ -264,7 +264,7 @@ export const AIAssistant = () => {
                         </button>
                       </div>
 
-                      {messages.map((msg, idx) => {
+                      {messages.map((msg) => {
                         const urlRegex = /(https?:\/\/[^\s]+)/g;
                         const parts = msg.text ? msg.text.split(urlRegex) : [];
 

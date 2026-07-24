@@ -43,7 +43,7 @@ export const getAIResponse = async (history: ChatMessage[]): Promise<string> => 
     const messages = [
       { role: 'system', content: SYSTEM_PROMPT },
       ...history.map(msg => ({
-        role: msg.role === 'ai' ? 'assistant' : msg.role, // Handle legacy 'ai' role from frontend
+        role: (msg.role as string) === 'ai' ? 'assistant' : msg.role, // Handle legacy 'ai' role from frontend
         content: msg.content
       }))
     ];

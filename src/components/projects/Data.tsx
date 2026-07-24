@@ -1,10 +1,19 @@
-import React from 'react';
+
 import { ChevronRight, Link } from 'lucide-react';
 import project1Img from '../../assets/Project-1-image.png';
 import project2Img from '../../assets/Project-2-image.png';
 import project3Img from '../../assets/Project-3-image.png';
 
-const PROJECT_CONTENT = [
+export interface ProjectProps {
+  title: string;
+  description?: string;
+  techStack?: string[];
+  date?: string;
+  links?: { name: string; url: string }[];
+  images?: { src: string; alt: string }[];
+}
+
+const PROJECT_CONTENT: ProjectProps[] = [
   {
     title: 'My Detailed Portfolio',
     description: 'A premium, highly interactive React component library for modern web applications.',
@@ -39,14 +48,6 @@ const PROJECT_CONTENT = [
   }
 ];
 
-interface ProjectProps {
-  title: string;
-  description?: string;
-  techStack?: string[];
-  date?: string;
-  links?: { name: string; url: string }[];
-  images?: { src: string; alt: string }[];
-}
 
 const ProjectContent = ({ project }: { project: ProjectProps }) => {
   const projectData = PROJECT_CONTENT.find((p) => p.title === project.title);
